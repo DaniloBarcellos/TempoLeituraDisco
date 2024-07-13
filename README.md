@@ -36,4 +36,10 @@ movimento).
 [Imagem]
 
 O programa reconhece entradas incorretas e exibe uma mensagem alertando
-o erro. 
+o erro. Os campos de entrada são limitados a 10 caracteres. E as restrições
+são:
+- Os valores de início e fim e o número de trilhas deve ser um inteiro positivo.
+- Os valores para os pesos devem ser do tipo float, positivos.
+- Os valores de início e fim devem ser diferentes.
+
+[Imagens de erros]

@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TempoDisco.MainPage"
+             Title=""
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#1C1010">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Name="EntradaNumeros" TargetType="Entry">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="Text" Value="0"/>
+                <Setter Property="TextColor" Value="#D7A3A0"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="ClearButtonVisibility" Value="Never"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="WidthRequest" Value="100"/>
+                <Setter Property="MaxLength" Value="10"/>
+            </Style>
+
+            <Style x:Name="FundoEntrada" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="WidthRequest" Value="100"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="CornerRadius" Value="3"/>
+                <Setter Property="BackgroundColor" Value="#493131"/>
+            </Style>
+
+            <Style x:Name="MensagemErro" TargetType="Label">
+                <Setter Property="Text" Value=""/>
+                <Setter Property="TextColor" Value="#A17E7C"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid ColumnDefinitions="auto, auto">
+
+        <Grid x:Name="LadoEsquerdo" RowDefinitions="auto, auto, auto" Grid.Column="0">
+            <Image Margin="90, 120, 10, 0"
+                Grid.Row="0"
+                Source="disco_transparente.png"
+                HeightRequest="400"
+                WidthRequest="400"
+                HorizontalOptions="Center"
+                />
+
+            <BoxView Margin="90, 20, 10, 0"
+                BackgroundColor="#A17E7C"
+                Grid.Row="1"
+                HeightRequest="50"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                />
+
+            <Label Margin="90, 20, 10, 0"
+                x:Name="Tempo"
+                Grid.Row="1"
+                Text="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                TextColor="#1C1010"
+                FontSize="28"
+                MaxLines="10"
+                />
+
+            <Label Margin="90, 105, 10, 0"
+                Grid.Row="2"
+                TextColor="#332222"
+                Text="DANILO BARCELLOS CORRÊA"
+                FontSize="20"
+                HorizontalOptions="Center"
+                />
+        </Grid>
+
+        <Grid x:Name="LadoDireito" RowDefinitions="auto, auto, auto, auto" Grid.Column="1">
+
+            <Grid x:Name="Posicoes" ColumnDefinitions="auto, auto, auto, auto" RowDefinitions="auto, auto, auto, auto" Grid.Row="0">
+                <Label Margin="50, 50, 10, 0"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="POSIÇÕES"
+                    TextColor="#CBABA3"
+                    FontSize="30"
+                    />
+
+                <Label Margin="20, 10, 10, 0"
+                    Grid.Column="0"
+                    Grid.Row="1"   
+                    Text="Início"
+                    TextColor="#CBABA3"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    />
+
+                <Image Margin="30, 10, 30, 0"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Source="seta_cortada_transparente.png"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    Rotation="90"
+                    />
+
+                <Label Margin="20, 10, 10, 0"
+                    Grid.Column="2"
+                    Grid.Row="1"   
+                    Text="Fim"
+                    TextColor="#CBABA3"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    />
+
+                <BoxView Margin="20, 10, 10, 0"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Style="{DynamicResource FundoEntrada}"
+                    />
+
+                <Entry Margin="20, 10, 10, 0"
+                    x:Name="Inicio"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Style="{DynamicResource EntradaNumeros}"
+                       />
+
+                <BoxView Margin="20, 10, 10, 0"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    Style="{DynamicResource FundoEntrada}"
+                    />
+                
+                <Entry Margin="20, 10, 10, 0"
+                    x:Name="Fim"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    Style="{DynamicResource EntradaNumeros}"
+                    />
+
+                <Label Margin="20, 10, 10, 0"
+                    x:Name="ErroInicio"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Style="{DynamicResource MenagemErro}"
+                    FontSize="10"
+                    />
+
+                <Label Margin="20, 10, 10, 0"
+                    x:Name="ErroFim"
+                    Grid.Column="2"
+                    Grid.Row="3"
+                    Style="{DynamicResource MensagemErro}"
+                    FontSize="10"
+                    />
+            </Grid>
+
+            <Grid x:Name="Segmentos" ColumnDefinitions="auto, auto, auto, auto" RowDefinitions="auto, auto, auto, auto" Grid.Row="1">
+                <Label Margin="50, 50, 0, 0"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="TRILHAS"
+                    TextColor="#CBABA3"
+                    FontSize="30"
+                    />
+
+                <Label Margin="50, 10, 10, 0"
+                    Grid.Column="0"
+                    Grid.Row="1"   
+                    Text="Trilhas"
+                    TextColor="#CBABA3"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    />
+
+                <BoxView Margin="50, 10, 10, 0"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Style="{DynamicResource FundoEntrada}"
+                    />
+
+                <Entry Margin="50, 10, 10, 0"
+                    x:Name="SegmentosEntrada"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Style="{DynamicResource EntradaNumeros}"
+                    />
+
+                <Label Margin="50, 10, 10, 0"
+                    x:Name="ErroSegmentos"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Style="{DynamicResource MensagemErro}"
+                    FontSize="10"
+                    />
+
+            </Grid>
+
+            <Grid x:Name="Pesos" ColumnDefinitions="auto, auto, auto, auto" RowDefinitions="auto, auto, auto, auto" Grid.Row="2">
+                <Label Margin="30, 50, 0, 0"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="PESOS"
+                    TextColor="#CBABA3"
+                    FontSize="30"
+                    />
+
+                <Label Margin="50, 10, 10, 0"
+                    Grid.Column="0"
+                    Grid.Row="1"   
+                    Text="Horizontal"
+                    TextColor="#CBABA3"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    />
+                
+                <BoxView Margin="50, 10, 10, 0"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Style="{DynamicResource FundoEntrada}"
+                    />
+
+                <Entry Margin="50, 10, 10, 0"
+                    x:Name="PesoHorizontal"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Style="{DynamicResource EntradaNumeros}"
+                    />
+
+                <Label Margin="50, 10, 10, 0"
+                    x:Name="ErroHorizontal"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Style="{DynamicResource MenagemErro}"
+                    HorizontalOptions="Center"
+                    FontSize="10"
+                       />
+
+                <Label Margin="140, 10, 10, 0"
+                    Grid.Column="1"
+                    Grid.Row="1"   
+                    Text="Vertical"
+                    TextColor="#CBABA3"
+                    FontSize="20"
+                    HorizontalOptions="Center"
+                    />
+
+                <BoxView Margin="140, 10, 10, 0"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Style="{DynamicResource FundoEntrada}"
+                    />
+
+                <Entry Margin="140, 10, 10, 0"
+                    x:Name="PesoVertical"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Style="{DynamicResource EntradaNumeros}"
+                    />
+
+                <Label Margin="140, 10, 10, 0"
+                    x:Name="ErroVertical"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    Style="{DynamicResource MenagemErro}"
+                    HorizontalOptions="Start"
+                    FontSize="10"
+                    />
+            </Grid>
+            
+            <Grid x:Name="BotaoFinal" Grid.Row="3">
+                <Button Margin="50, 50, 0, 0"
+                    x:Name="Calcular"
+                    Clicked="OnCalcular"
+                    BackgroundColor="#793C39"
+                    HeightRequest="30"
+                    WidthRequest="120"
+                    HorizontalOptions="Center"
+                    Text="CALCULAR"
+                    TextColor="#1C1010"
+                    />
+
+            </Grid>
+            
+        </Grid>
+        
+    </Grid>
+
+</ContentPage>

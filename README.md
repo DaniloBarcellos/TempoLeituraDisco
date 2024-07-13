@@ -44,8 +44,6 @@ tabela), o *peso horizontal* (custo em uma unidade de tempo para esse
 movimento) e *peso vertical* (custo em uma unidade de tempo para esse
 movimento). Os ícones são autorais.
 
-
-
 O programa reconhece entradas incorretas e exibe uma mensagem alertando
 o erro. Os campos de entrada são limitados a 10 caracteres. E as restrições
 são:
@@ -53,7 +51,7 @@ são:
 - Os valores para os pesos devem ser do tipo float, positivos.
 - Os valores de início e fim devem ser diferentes.
 
-erros
+![Erros](https://github.com/user-attachments/assets/509ac93c-09dd-4e1c-ae23-910ecb19101c)
 
 O resultado exibido pelo programa para o exemplo A
-aa
+![ExemploA](https://github.com/user-attachments/assets/a051c953-3d77-4aa8-876a-8f5ea0652ef8)

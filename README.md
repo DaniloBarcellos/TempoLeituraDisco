@@ -37,7 +37,6 @@ ser para a direita e não para a esquerda, são 7 movimentos na horizontal e 1 n
 
 Assim, por tentativa e erro, cheguei nas fórmulas que estão na classe *Operacoes*.
 
-
 ## O Programa
 O programa, para Windows, contém apenas uma página, e nela, o usuário deve digitar a
 *origem*, o *destino*, o número de *trilhas* (o número de colunas da
@@ -45,7 +44,7 @@ tabela), o *peso horizontal* (custo em uma unidade de tempo para esse
 movimento) e *peso vertical* (custo em uma unidade de tempo para esse
 movimento). Os ícones são autorais.
 
-[Imagem]
+
 
 O programa reconhece entradas incorretas e exibe uma mensagem alertando
 o erro. Os campos de entrada são limitados a 10 caracteres. E as restrições
@@ -54,4 +53,7 @@ são:
 - Os valores para os pesos devem ser do tipo float, positivos.
 - Os valores de início e fim devem ser diferentes.
 
-[Imagens de erros]
+erros
+
+O resultado exibido pelo programa para o exemplo A
+aa

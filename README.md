@@ -1,10 +1,8 @@
 # Tempo de Leitura de Disco
 ## Contexto do Projeto
 O projeto desse repositório foi desenvolvido para calcular o tempo de leitura
-de um disco rígido. Conforme aprendi em aula, pode-se representar o disco por
+de um disco rígido. Conforme aprendi em uma aula de Sistemas Operacionais, para realizar esse cálculo, pode-se representar o disco por
 uma tabela, contendo divisões horizontais e verticais.
-
-[Imagem disco -> retângulo -> tabela]
 
 A leitura do disco é realizada pelo braço e, no caso do projeto, considera-se
 que o seu movimento é limitado, podendo se mover em apenas três direções 

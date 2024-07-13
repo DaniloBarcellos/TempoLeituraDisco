@@ -19,11 +19,23 @@ destino, considerando as restrições acima. Para esse custo, considera-se
 um peso para movimentos na vertical e outro para movimentos na horizontal.
 
 Por exemplo:
-[tabela 1]
+![Tabuleiro](https://github.com/user-attachments/assets/98331430-c9f9-43a3-80da-e981c903b787)
+Acabei representando essa tabela parecendo um tabuleiro, mas tudo bem. Ela possui 10 colunas e 4
+linhas. Vamos considerar que o peso para movimentos horizontais é *2*, e para os verticais
+é *3*.
 
-[tabela 2]
+Exemplo A:
+![ExemploAMovimento](https://github.com/user-attachments/assets/935a9a3c-3645-47ec-92e9-5a9fd00cb5eb)
+O moviemento incia no quadrado 1 e vai até o 27. São 6 movimentos na horizontal e 2 na vertical. Tem-se:
+6x2 + 2x3 = 12 + 6 = 18.
 
-Assim, por tentativa e erro, cheguei às seguintes fórmulas:
+Exemplo B:
+![ExemploBMovimento](https://github.com/user-attachments/assets/fe4a10ab-6287-4ba8-9138-6deebe9b5aa4)
+O movimento, agora, inicia-se no quadrado 36 e termina no 23. Como o movimento, na horizontal, só pode
+ser para a direita e não para a esquerda, são 7 movimentos na horizontal e 1 na vertical. Tem-se:
+7x2 + 1x3 = 14 + 3 = 17.
+
+Assim, por tentativa e erro, cheguei nas fórmulas que estão na classe *Operacoes*.
 
 
 ## O Programa

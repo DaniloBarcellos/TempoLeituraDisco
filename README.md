@@ -39,7 +39,7 @@ Assim, por tentativa e erro, cheguei nas fórmulas que estão na classe *Operaco
 
 
 ## O Programa
-O programa contém apenas uma página, e nela, o usuário deve digitar a
+O programa, para Windows, contém apenas uma página, e nela, o usuário deve digitar a
 *origem*, o *destino*, o número de *trilhas* (o número de colunas da
 tabela), o *peso horizontal* (custo em uma unidade de tempo para esse
 movimento) e *peso vertical* (custo em uma unidade de tempo para esse
